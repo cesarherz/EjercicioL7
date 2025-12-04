@@ -1,0 +1,103 @@
+:root {
+    --bg-body:lightblue;
+    --text-main: #7f8285;
+    --primary: red;
+
+}
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 16px; 
+}
+
+body>header,
+body > main{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1, h2 ,h3{
+    color: red;
+}
+
+h1{
+    padding-bottom: 4rem;
+}
+h2{
+    padding-bottom: 1rem;
+}
+
+h3{
+    padding-bottom: 0.5rem;
+}
+
+article, h2, h3{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+img{
+    display: block;
+    max-width: 400px;
+    max-height: 300px;
+    margin: 24px auto;
+    align-items: center;
+}
+
+footer{
+    background-color: black;
+}
+
+#btnScrollArriba {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background:var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: none;
+        }
+
+        #btnScrollArriba:hover {
+            background: #764ba2;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        #btnScrollArriba.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
